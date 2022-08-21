@@ -9,8 +9,7 @@
   2) Qual o objetivo do teste unitário?
     - Testar a menor unidade de codigo possivel (função ou método)
     - Validar o comportamento da logica (de negócio) implementada
-
-
+    - Métricas de cobertura (5000 linhas de código / 200 funções)
 
  ### Duvidas frequentes
   1) O teste unitário deve testar bibliotecas/servicos externos que é utilizado dentro do fluxo do sistema?
@@ -24,5 +23,17 @@
  - Passar pelos conceitos base
  - Escrever o primeiro teste com uma estoria de usuario
  - Apresentar situações 
- - Devo conseguir cadastrar um usuario com nome, email, cpf e numero de telefone.
- - Como usuario quero logar no sistema.
+ - Devo conseguir cadastrar um usuario com:
+    - nome
+    - email
+    - cpf
+    - foto
+    - O cadastro terá uma data de expiração
+ - Critérios de aceitação:
+  1) O nome deve ser obrigatório
+  2) Não posso cadastrar um email duplicado
+  3) Não posso cadastrar um cpf duplicado
+  4) Quando criado um novo cadastro, ele é valido até um ano
+  5) O CPF deve ser salvo somente com números (Requisito não funcional)
+
+  
