@@ -24,6 +24,7 @@
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
     "@prisma/client": "^4.2.1",
     "prisma": "^4.2.1",
@@ -66,8 +67,20 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "modules/**/*.service.ts",
+      "utils/**/*.ts"
     ],
+    "coverageThreshold": {
+      "global": {
+          "branches": 90,
+          "functions": 90,
+          "lines": 90,
+          "statements": 90
+      }
+    },
+    "moduleNameMapper": {
+      "src/(.*)$": "<rootDir>/$1"
+    },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }

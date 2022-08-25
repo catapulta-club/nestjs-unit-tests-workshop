@@ -15,4 +15,5 @@ model User {
   email     String
   name      String
   cpf       String
+  expiredAt DateTime
 }
